@@ -132,9 +132,28 @@ Run this query.
 INSERT INTO solution VALUES (1, 'Jeremy Bowers');
         
         SELECT value FROM solution;
-```        
+```     
 
-![fork repository](https://github.com/Bennykillua/sql-mysteries-SOLVED/blob/master/Solved%20solution/images/Congrat.PNG)
+
+## 6. Who hired him Jeremy Bowers?
+
+Run this query.
+```
+SELECT * FROM person
+JOIN drivers_license
+ON person.license_id = drivers_license.id
+WHERE drivers_license.car_make LIKE "Tesla%"
+AND drivers_license.gender LIKE "female%"
+AND drivers_license.hair_color LIKE "red%"
+AND (drivers_license.height = 65 OR drivers_license.height = 67)
+```
+
+![fork repository](https://github.com/Bennykillua/sql-mysteries-SOLVED/blob/master/Solved%20solution/images/Capture.PNG)
+
+
+Killer = Jeremy Bowers 
+
+Hired by Red Korb
 
 # Congratulation 🎉 
 
